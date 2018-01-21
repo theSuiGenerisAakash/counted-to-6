@@ -13,5 +13,5 @@ const arrowFunc = require('./arrowFunc');
 // });
 
 test('An argument of ["Fill", " ", "Umbrella"] should return "F U":', () => {
-    expect(arrowFunc(['Fill', ' ', 'Umbrella'])).toBe('["Fill", " ", "Umbrella"] should return "F U"');
+    expect(arrowFunc('["Fill", " ", "Umbrella"]')).toBe('[Fill, ,Umbrella] becomes "F U"');
 });
