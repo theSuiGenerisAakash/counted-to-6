@@ -16,6 +16,7 @@ const destruct = require('./destruct');
 //     expect(arrowFunc('["Fill", " ", "Umbrella"]')).toBe('[Fill, ,Umbrella] becomes "F U"');
 // });
 
+//A maximum of five arguments can be passed
 test('Argument [1, "jdoe", "jdoe@example.com", "John", "Doe"] should return jdoe and jdoe@example.com', () => {
-    expect(destruct([1, 'jdoe', 'jdoe@example.com', 'John', 'Doe'])).toEqual(['jdoe', 'jdoe@example.com']);
+    expect(destruct([1, 'jdoe', 'jdoe@example.com', 'John', 'Doe'])).toEqual({username: 'jdoe', email: 'jdoe@example.com'});
 });
