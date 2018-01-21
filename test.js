@@ -2,8 +2,8 @@
 // const templateStrings = require('./template-strings');
 // const arrowFunc = require('./arrowFunc');
 // const destruct = require('./destruct');
-const spreadOp = require('./spreadOp');
-
+// const spreadOp = require('./spreadOp');
+const restParam = require('./restParam');
 // test('adds 1 + 2 to equal 3', () => {
 //   expect(sum.sum(1, 2)).toBe(3);
 // });
@@ -29,6 +29,8 @@ const spreadOp = require('./spreadOp');
 //     expect(destruct([])).toEqual({username: undefined, email: undefined});
 // });
 
-test('Min of [0,-1,2,2] should be -1',() => expect(spreadOp([0,-1,2,2])).toBe(-1));
-test('Min of [] should be undefined',() => expect(spreadOp([])).toBe(Infinity));
-test('Min of [-Infinity, -Infinity] should be -Infinity',() => expect(spreadOp([-Infinity, -Infinity])).toBe(-Infinity));
+// test('Min of [0,-1,2,2] should be -1',() => expect(spreadOp([0,-1,2,2])).toBe(-1));
+// test('Min of [] should be undefined',() => expect(spreadOp([])).toBe(Infinity));
+// test('Min of [-Infinity, -Infinity] should be -Infinity',() => expect(spreadOp([-Infinity, -Infinity])).toBe(-Infinity));
+
+test('Should return 3 for 1,3,5 :', () => expect(restParam(1,3,5)).toBe(3));
