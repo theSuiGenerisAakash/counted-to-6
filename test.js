@@ -15,6 +15,3 @@ const arrowFunc2 = require('./arrowFunc2');
 // test('An argument of ["Fill", " ", "Umbrella"] should return "F U":', () => {
 //     expect(arrowFunc('["Fill", " ", "Umbrella"]')).toBe('[Fill, ,Umbrella] becomes "F U"');
 // });
-test('Function should return undefined and not Ouch!:', () => {
-    expect(arrowFunc2()).toBe(undefined);
-});
