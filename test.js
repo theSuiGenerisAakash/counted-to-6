@@ -5,7 +5,8 @@
 // const spreadOp = require('./spreadOp');
 // const restParam = require('./restParam');
 // const defaultParam = require('./defaultParam');
-const makeImp = require('./makeImp');
+// const makeImp = require('./makeImp');
+const tagtempl = require('./tagtempl');
 
 // test('adds 1 + 2 to equal 3', () => {
 //   expect(sum.sum(1, 2)).toBe(3);
@@ -45,12 +46,16 @@ const makeImp = require('./makeImp');
 // test('Should return 0.5 for no input values', () => {
 //     expect(defaultParam()).toBe(0.5);
 // });
-//Rest of the test cases are covered by the verifier itself
+// Rest of the test cases are covered by the verifier itself
 
-test('An empty string should be returing an empty string', () => {
-    expect(makeImp('')).toBe('');
-});
-//Always test before committing
-test('An empty string with 5 should be returing !!!!!', () => {
-    expect(makeImp('', 5)).toBe('!!!!!');
-});
+// test('An empty string should be returing an empty string', () => {
+//     expect(makeImp('')).toBe('');
+// });
+// //Always test before committing
+// test('An empty string with 5 should be returing !!!!!', () => {
+//     expect(makeImp('', 5)).toBe('!!!!!');
+// });
+
+test('Passing undefined and "<span>undefined</span> is not a string" gives "<b>undefined</b>: &lt;span&gt;undefined&lt;span&gt; is not a string"',
+() =>  expect(tagtempl(undefined, "<span>undefined</span> is not a string")).toBe("<b>undefined</b>: &lt;span&gt;undefined&lt;span&gt; is not a string")
+);
