@@ -4,7 +4,8 @@
 // const destruct = require('./destruct');
 // const spreadOp = require('./spreadOp');
 // const restParam = require('./restParam');
-const defaultParam = require('./defaultParam');
+// const defaultParam = require('./defaultParam');
+const makeImp = require('./makeImp');
 
 // test('adds 1 + 2 to equal 3', () => {
 //   expect(sum.sum(1, 2)).toBe(3);
@@ -41,6 +42,11 @@ const defaultParam = require('./defaultParam');
 // test('Should return Infinity for Infinity, -3:', () => expect(restParam(Infinity,-3)).toBe(Infinity));
 // test('Should return NaN for Infinity, -Infinity:', () => expect(restParam(Infinity,-Infinity)).toBe(NaN));
 
-test('Should return 0.5 for no input values', () => {
-    expect(defaultParam()).toBe(0.5);
+// test('Should return 0.5 for no input values', () => {
+//     expect(defaultParam()).toBe(0.5);
+// });
+//Rest of the test cases are covered by the verifier itself
+
+test('An empty string should be returing an empty string', () => {
+    expect(makeImp('')).toBe('');
 });
