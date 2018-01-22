@@ -17,6 +17,11 @@ const tagtempl = require('./tagtempl');
 //     Your name lowercased is "avishek".`);
 // });
 //
+// test('Argument "" returns Hello, ! on one line and Your name lowercased is "". on the second line:', () => {
+//     expect(templateStrings('')).toBe(`Hello, !
+//     Your name lowercased is "".`);
+// });
+
 // test('An argument of ["Fill", " ", "Umbrella"] should return "F U":', () => {
 //     expect(arrowFunc('["Fill", " ", "Umbrella"]')).toBe('[Fill, ,Umbrella] becomes "F U"');
 // });
@@ -57,9 +62,9 @@ const tagtempl = require('./tagtempl');
 // });
 
 test('Passing undefined and "<span>undefined</span> is not a string" gives "<b>undefined says</b>: &lt;span&gt;undefined&lt;span&gt; is not a string"',
-() =>  expect(tagtempl(undefined, '<span>undefined</span> is not a string')).toBe("<b>undefined says</b>: \"&lt;span&gt;undefined&lt;/span&gt; is not a string\"")
+	() =>  expect(tagtempl(undefined, '<span>undefined</span> is not a string')).toBe('<b>undefined says</b>: "&lt;span&gt;undefined&lt;/span&gt; is not a string"')
 );
 
 test('Passing "<undefined>" and undefined gives ""',
-() =>  expect(tagtempl("<undefined>", "")).toBe('<b><undefined> says</b>: \"\"')
+	() =>  expect(tagtempl('<undefined>', '')).toBe('<b><undefined> says</b>: ""')
 );
