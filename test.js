@@ -56,6 +56,6 @@ const tagtempl = require('./tagtempl');
 //     expect(makeImp('', 5)).toBe('!!!!!');
 // });
 
-test('Passing undefined and "<span>undefined</span> is not a string" gives "<b>undefined</b>: &lt;span&gt;undefined&lt;span&gt; is not a string"',
-() =>  expect(tagtempl(undefined, "<span>undefined</span> is not a string")).toBe("<b>undefined</b>: &lt;span&gt;undefined&lt;span&gt; is not a string")
+test('Passing undefined and "<span>undefined</span> is not a string" gives "<b>undefined says</b>: &lt;span&gt;undefined&lt;span&gt; is not a string"',
+() =>  expect(tagtempl(undefined, '<span>undefined</span> is not a string')).toBe("<b>undefined says</b>: \"&lt;span&gt;undefined&lt;/span&gt; is not a string\"")
 );
