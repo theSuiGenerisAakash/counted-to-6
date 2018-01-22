@@ -6,7 +6,7 @@
 // console.log(obj);
 
 module.exports = function (arr) {
-       let obj =  {};
-    [ , obj.username, obj.email, , ] = arr;
-    return obj;
+	let obj =  {};
+	[ , obj.username, obj.email, , ] = arr;
+	return obj;
 };
