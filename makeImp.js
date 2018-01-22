@@ -1,3 +1,3 @@
-module.exports = function (arg, transform = x => String.prototype.repeat(y,y.length)) {
-
+module.exports = function (arg, len = arg.length) {
+    return arg + String.prototype.repeat.call('!',len);
 };

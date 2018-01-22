@@ -48,5 +48,5 @@ const makeImp = require('./makeImp');
 //Rest of the test cases are covered by the verifier itself
 
 test('An empty string should be returing an empty string', () => {
-    expect(makeImp('')).toBe('');
+    expect(makeImp('', 5)).toBe('');
 });
