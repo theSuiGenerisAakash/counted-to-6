@@ -23,11 +23,8 @@
 //     Your name lowercased is "".`);
 // });
 
-// test('An argument of ["Fill", " ", "Umbrella"] should return "F U":', () => {
-//     expect(arrowFunc('["Fill", " ", "Umbrella"]')).toBe('[Fill, ,Umbrella] becomes "F U"');
-// });
 
-//test('Function should return Ouch which is the context of the object as arrow is binded', expect(arrowFunc2());
+// test('Function should return Ouch which is the context of the object as arrow is binded', expect(arrowFunc2()).toBe('Ouch');
 
 // test('Argument [1, "jdoe", "jdoe@example.com", "John", "Doe"] should return jdoe and jdoe@example.com', () => {
 //     expect(destruct([1, 'jdoe', 'jdoe@example.com', 'John', 'Doe'])).toEqual({username: 'jdoe', email: 'jdoe@example.com'});
@@ -64,11 +61,14 @@
 // test('An empty string with 5 should be returing !!!!!', () => {
 //     expect(makeImp('', 5)).toBe('!!!!!');
 // });
+// test('A string with undefined should be returning the string with! times the length of string', () => {
+//     expect(makeImp('yes', undefined)).toBe('yes!!!');
+// });
 
 // test('Passing undefined and "<span>undefined</span> is not a string" gives "<b>undefined says</b>: &lt;span&gt;undefined&lt;span&gt; is not a string"',
-// 	() =>  expect(tagtempl(undefined, '<span>undefined</span> is not a string')).toBe('<b>undefined says</b>: "&lt;span&gt;undefined&lt;/span&gt; is not a string"')
+// 	() =>  expect(tagtempl`<b>undefined says</b>: "<span>undefined</span> is not a string"``).toBe('<b>undefined says</b>: "&lt;span&gt;undefined&lt;/span&gt; is not a string"')
 // );
 //
 // test('Passing "<undefined>" and undefined gives ""',
-// 	() =>  expect(tagtempl('<undefined>', '')).toBe('<b><undefined> says</b>: ""')
+// 	() =>  expect(tagtempl`<b>undefined says</b>: "<span>undefined</span> is not a string"``).toBe('<b>undefined says</b>: ""')
 // );
